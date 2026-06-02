@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Dependency Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="graph.css">
+    <script>
+        if(!localStorage.getItem("user"))
+        {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <h2>Concept Dependency Visualizer</h2>
+            <span id="userDisplay"></span>
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#dashboard">Dashboard</a></li>
+
+                <li><a href="#learning-path">Learning Path</a></li>
+
+                <li><a href="#graph-section">Graph</a></li>
+
+                <li><a href="#progress-section">Progress</a></li>
+
+            </ul>
+            <button id="themeBtn">
+                🌙 Theme
+            </button>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <h1>Visualize Your Learning Journey</h1>
+
+        <p>
+            Understand prerequisite concepts, generate learning paths,
+            identify knowledge gaps, and track your progress through
+            interactive concept dependency visualization.
+        </p>
+
+        <a href="roadmap.html" class="btn">
+            Get Started
+        </a>
+
+    </section>
+
+    <!-- Dashboard Section -->
+
+    <section id="dashboard">
+
+        <h2 class="section-title">
+            Dashboard Overview
+        </h2>
+
+        <div class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>Total Concepts</h3>
+
+                <p id="totalConcepts">
+                    0
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <p id="completedConcepts">
+                    0
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Remaining</h3>
+
+                <p id="remainingConcepts">
+                    0
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Progress</h3>
+
+                <p id="progressPercentage">
+                    0%
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Learning Path Generator -->
+
+    <section id="learning-path">
+
+        <h2 class="section-title">
+            Learning Path Generator
+        </h2>
+
+        <div class="path-generator">
+
+            <select id="conceptSelect">
+
+                <option value="">
+                    Select Target Concept
+                </option>
+
+            </select>
+
+            <button id="generateBtn">
+                Generate Learning Path
+            </button>
+
+        </div>
+
+        <div id="pathOutput">
+
+            Your learning path will appear here.
+
+        </div>
+
+    </section>
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+        placeholder="Search Concept"
+        >
+
+        <button id="searchBtn">
+        Search
+        </button>
+
+    </div>
+    <!-- Concept Graph -->
+
+    <section id="graph-section">
+
+        <h2 class="section-title">
+            Concept Dependency Graph
+        </h2>
+
+        <div id="graphContainer">
+
+            <p>
+                Graph Visualization Area
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Progress Tracker -->
+
+    <section id="progress-section">
+
+        <h2 class="section-title">
+            Progress Tracker
+        </h2>
+
+        <div id="conceptList">
+
+        </div>
+
+    </section>
+
+    <!-- Knowledge Gap Detector -->
+
+    <section id="gap-section">
+
+        <h2 class="section-title">
+            Knowledge Gap Detector
+        </h2>
+
+        <div id="gapOutput">
+
+            Missing concepts will appear here.
+
+        </div>
+
+    </section>
+
+    <!-- Roadmap Section -->
+
+    <section id="roadmap-section">
+
+        <h2 class="section-title">
+            Learning Roadmaps
+        </h2>
+
+        <div class="roadmap-container">
+
+            <div class="roadmap-card">
+
+                <h3>DSA Roadmap</h3>
+
+                <p>
+                    Arrays → Linked Lists → Stacks →
+                    Trees → Graphs → Dynamic Programming
+                </p>
+
+            </div>
+
+            <div class="roadmap-card">
+
+                <h3>Core Subjects</h3>
+
+                <p>
+                    OOP → DBMS → Operating Systems →
+                    Computer Networks
+                </p>
+
+            </div>
+
+            <div class="roadmap-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    HTML → CSS → JavaScript
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Concept Dependency Visualizer |
+            Built using HTML, CSS and JavaScript
+        </p>
+
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="concepts.js"></script>
+    <script src="storage.js"></script>
+    <script src="tracker.js"></script>
+    <script src="roadmap.js"></script>
+    <script src="graph.js"></script>
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

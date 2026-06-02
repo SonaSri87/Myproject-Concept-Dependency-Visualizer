@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Learning Path Generator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <h2>
+            Concept Dependency Visualizer
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="roadmap.html">
+                    Roadmap
+                </a>
+            </li>
+
+            <li>
+                <a href="graph.html">
+                    Graph
+                </a>
+            </li>
+
+        </ul>
+        <button id="themeBtn">
+            🌙 Theme
+        </button>
+    </nav>
+
+    <!-- Main Section -->
+
+    <section class="roadmap-section">
+
+        <h1>
+            Learning Path Generator
+        </h1>
+
+        <p>
+            Select a target concept and generate its learning roadmap.
+        </p>
+
+        <!-- Controls -->
+
+        <div class="controls">
+
+            <select id="targetConcept">
+
+                <option value="">
+                    Select Target Concept
+                </option>
+
+            </select>
+
+            <button id="generateBtn">
+                Generate Learning Path
+            </button>
+
+        </div>
+
+        <!-- Roadmap Output -->
+
+        <div id="roadmapContainer">
+
+            Your learning path will appear here.
+
+        </div>
+
+        <hr>
+
+        <!-- Concept Details -->
+
+        <h2>
+            Concept Details
+        </h2>
+
+        <div id="conceptDetails">
+
+            Select a concept to view details.
+
+        </div>
+
+        <hr>
+
+        <!-- Knowledge Gap Analyzer -->
+
+        <h2>
+            Knowledge Gap Analyzer
+        </h2>
+
+        <button id="gapBtn">
+            Analyze Missing Concepts
+        </button>
+
+        <div id="gapOutput">
+
+        </div>
+
+        <hr>
+
+        <!-- Search Concepts -->
+
+        <div class="search-section">
+
+            <h2>
+                Search Concepts
+            </h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Concept"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+            <div id="searchResult">
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Download -->
+
+        <button id="downloadBtn">
+            Download Roadmap
+        </button>
+
+        <hr>
+
+        <!-- Topological Sort -->
+
+        <h2>
+            Optimal Learning Order
+        </h2>
+        <hr>
+
+        <h2>Personalized Study Plan</h2>
+
+        <button id="studyPlanBtn">
+            Generate Study Plan
+        </button>
+
+        <div id="studyPlanOutput">
+
+        </div>
+        <button id="topologyBtn">
+            Show Learning Order
+        </button>
+
+        <div id="topologyOutput">
+
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+
+    <script src="concepts.js"></script>
+
+    <script src="conceptInfo.js"></script>
+
+    <script src="roadmap.js"></script>
+
+</body>
+
+</html>

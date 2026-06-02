@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Certificate
+    </title>
+
+    <style>
+
+        body
+        {
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            height:100vh;
+
+            background:#f4f4f4;
+
+            font-family:Arial;
+        }
+
+        .certificate
+        {
+            width:800px;
+
+            padding:50px;
+
+            background:white;
+
+            border:10px solid #2563eb;
+
+            text-align:center;
+        }
+
+        h1
+        {
+            color:#2563eb;
+
+            font-size:50px;
+        }
+
+        h2
+        {
+            margin-top:30px;
+        }
+
+        p
+        {
+            font-size:22px;
+        }
+
+        button
+        {
+            margin-top:30px;
+
+            padding:12px 25px;
+
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="certificate">
+
+    <h1>Certificate of Completion</h1>
+
+    <h2>Concept Dependency Visualizer</h2>
+
+    <p>This certifies that</p>
+
+    <h2 id="certName"></h2>
+
+    <p>has successfully completed all concepts.</p>
+
+    <h3>Congratulations!</h3>
+
+    <button onclick="window.print()">Download / Print</button>
+
+</div>
+<script src="certificate.js"></script>
+</body>
+
+</html>

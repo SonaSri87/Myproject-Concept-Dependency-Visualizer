@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Concept Dependency Visualizer</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="graph.html">Graph</a></li>
+        </ul>
+        <button id="themeBtn">
+            🌙 Theme
+        </button>
+    </nav>
+    <section class="welcome-card">
+
+        <h1>
+            Welcome to Concept Dependency Visualizer
+        </h1>
+
+        <p>
+            Track your learning journey,
+            visualize dependencies,
+            and master concepts step by step.
+        </p>
+
+    </section>
+    <section>
+
+        <h2>
+            Quick Stats
+        </h2>
+
+        <div id="quickStats">
+
+        </div>
+
+    </section>
+    <section>
+
+        <h1 class="section-title">
+            Learning Dashboard
+        </h1>
+
+        <p class="dashboard-description">
+
+            Monitor your learning progress,
+            achievements,
+            goals,
+            and roadmap completion.
+
+        </p>
+
+        <div class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Concepts</h3>
+                <p id="totalConcepts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedConcepts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Remaining</h3>
+                <p id="remainingConcepts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Progress</h3>
+                <p id="progressPercentage">0%</p>
+            </div>
+
+        </div>
+
+        <div class="progress-section">
+
+            <h3>Overall Progress</h3>
+
+            <div class="progress-bar">
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+                </div>
+            </div>
+
+        </div>
+        <section class="analytics-section">
+
+            <h2>Learning Analytics</h2>
+
+            <div id="analyticsContainer">
+
+            </div>
+
+        </section>
+        <section>
+
+            <h2>
+            Learning Timeline
+            </h2>
+
+            <div id="timelineContainer">
+
+            </div>
+
+        </section>
+        <hr>
+
+        <section>
+
+            <h2>
+            Achievement Badges
+            </h2>
+
+            <div id="badgeContainer">
+
+            </div>
+
+        </section>
+        <hr>
+
+        <section>
+
+            <h2>
+                Weekly Learning Goal
+            </h2>
+
+            <input
+                type="number"
+                id="goalInput"
+                placeholder="Enter Weekly Goal"
+            >
+
+            <button id="saveGoalBtn">
+                Save Goal
+            </button>
+
+            <div id="goalProgress">
+
+            </div>
+
+        </section>
+        <hr>
+
+        <section>
+
+            <h2>
+                Learning Report
+            </h2>
+
+            <button id="reportBtn">
+                Generate Report
+            </button>
+
+        </section>
+        <section class="recommendation-section">
+
+            <h2>Learning Insights</h2>
+
+            <div id="learningInsights">
+
+            </div>
+
+        </section>
+        <div class="category-stats">
+
+            <div class="card">
+                <h3>DSA Concepts</h3>
+                <p id="dsaCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>System Design</h3>
+                <p id="systemCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p id="webCount">0</p>
+            </div>
+
+        </div>
+
+        <h2 style="margin-top:30px;">
+            Concept Progress Tracker
+        </h2>
+
+        <div id="conceptList"></div>
+
+    </section>
+    <hr>
+
+<section>
+
+    <h2>
+        Actions
+    </h2>
+
+    <button id="resetBtn">
+        Reset All Progress
+    </button>
+
+    <button id="certificateBtn">
+        Generate Certificate
+    </button>
+
+</section>
+
+<footer class="footer">
+
+    <p>
+        Concept Dependency Visualizer © 2026
+    </p>
+
+</footer>
+    <script src="concepts.js"></script>
+    <script src="storage.js"></script>
+    <script src="tracker.js"></script>
+
+</body>
+
+</html>

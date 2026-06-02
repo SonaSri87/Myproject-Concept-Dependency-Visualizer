@@ -1,0 +1,561 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+#startBtn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#startBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Sections */
+
+section {
+    padding: 60px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 2rem;
+    color: #38bdf8;
+}
+
+/* Learning Path */
+
+.path-generator {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+select,
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background-color: #38bdf8;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#pathOutput {
+    margin-top: 25px;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 60px;
+}
+
+/* Graph Section */
+
+#graphContainer {
+    min-height: 400px;
+    background-color: #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Progress Section */
+
+#conceptList {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Gap Section */
+
+#gapOutput {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-height: 80px;
+}
+
+/* Roadmap */
+
+.roadmap-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.roadmap-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-5px);
+}
+
+.roadmap-card h3 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111827;
+    margin-top: 30px;
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+.concept-item
+{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    margin:8px 0;
+    background:#334155;
+    border-radius:8px;
+}
+
+.graph-node
+{
+    background:#38bdf8;
+    color:black;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    display:inline-block;
+    font-weight:bold;
+}
+.roadmap-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls select,
+.controls button {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.controls button {
+    cursor: pointer;
+}
+
+#roadmapContainer {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.roadmap-card {
+    background: #1d2b44;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #38bdf8;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.step-number {
+    font-weight: bold;
+    color: #38bdf8;
+    margin-right: 10px;
+}
+
+.concept-name {
+    color: white;
+}
+.search-section
+{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.search-section input
+{
+    padding: 12px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+}
+
+.search-section button
+{
+    padding: 12px 20px;
+    margin-left: 10px;
+}
+
+#searchResult
+{
+    margin-top: 20px;
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 50px;
+}
+.btn
+{
+    display:inline-block;
+    padding:12px 24px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+#topologyOutput
+{
+    margin-top:20px;
+}
+#gapOutput
+{
+    margin-top:20px;
+}
+.analytics-section
+{
+    margin-top:30px;
+}
+
+#analyticsContainer
+{
+    margin-top:15px;
+}
+/* Search Section */
+
+.search-section
+{
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.search-box
+{
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+#searchInput
+{
+    width: 320px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+#searchBtn
+{
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #38bdf8;
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#searchBtn:hover
+{
+    transform: scale(1.05);
+}
+
+#searchResult
+{
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    color: white;
+}
+#studyPlanOutput
+{
+    margin-top:20px;
+}
+#badgeContainer
+{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.badge-card
+{
+    background:#1e293b;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    border-left:5px solid gold;
+}
+.goal-bar
+{
+    width:100%;
+
+    height:30px;
+
+    background:#ddd;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+}
+
+.goal-fill
+{
+    height:100%;
+
+    background:#38bdf8;
+
+    transition:0.5s;
+}
+.light-theme
+{
+    background:white;
+
+    color:black;
+}
+
+.light-theme .roadmap-card
+{
+    background:#f1f5f9;
+
+    color:black;
+}
+
+.light-theme .navbar
+{
+    background:#e2e8f0;
+}
+#themeBtn
+{
+    padding:10px 15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+.welcome-card
+{
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+}
+.footer
+{
+    text-align:center;
+
+    margin-top:50px;
+
+    padding:20px;
+}
+
+.dashboard-description
+{
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+}
+
+#resetBtn,
+#certificateBtn
+{
+    margin:10px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+#resetBtn:hover,
+#certificateBtn:hover
+{
+    transform:scale(1.05);
+}
+
+.actions-section
+{
+    text-align:center;
+}
