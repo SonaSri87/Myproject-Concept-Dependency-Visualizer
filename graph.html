@@ -30,42 +30,26 @@
 
     <nav class="navbar">
 
-        <h2>
-            Concept Dependency Visualizer
-        </h2>
+        <h2>Concept Dependency Visualizer</h2>
 
         <ul>
-
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="dashboard.html">
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="roadmap.html">
-                    Learning Path
-                </a>
-            </li>
-
-            <li>
-                <a href="graph.html">
-                    Graph
-                </a>
-            </li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="graph.html">Graph</a></li>
         </ul>
-        <button id="themeBtn">
-            🌙 Theme
-        </button>
-    </nav>
 
+        <div class="nav-right">
+
+            <span id="userDisplay"></span>
+
+            <button id="themeBtn">
+                🌙 Dark / ☀ Light
+            </button>
+
+        </div>
+
+    </nav>
     <section>
 
         <h1 class="section-title">
@@ -81,6 +65,7 @@
     <script src="concepts.js"></script>
 
     <script src="graph.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

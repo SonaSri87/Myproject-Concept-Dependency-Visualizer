@@ -63,6 +63,14 @@ function initializeTracker()
         "click",
         generateCertificate
     );
+        document
+    .getElementById(
+        "gapBtn"
+    )
+    .addEventListener(
+        "click",
+        analyzeKnowledgeGaps
+    );
 }
 // ============================
 // Render Concept List
@@ -902,4 +910,63 @@ function generateCertificate()
     }
 
     window.open("certificate.html", "_blank");
+}
+function analyzeKnowledgeGaps()
+{
+    const completed =
+    JSON.parse(
+        localStorage.getItem(
+            "completedConcepts"
+        )
+    ) || [];
+
+    let missing = [];
+
+    Object.keys(
+        concepts
+    ).forEach(
+        concept =>
+        {
+            if(
+                !completed.includes(
+                    concept
+                )
+            )
+            {
+                missing.push(
+                    concept
+                );
+            }
+        }
+    );
+
+    const output =
+    document.getElementById(
+        "gapOutput"
+    );
+
+    if(
+        missing.length === 0
+    )
+    {
+        output.innerHTML =
+        `
+        <h3>
+        🎉 No Knowledge Gaps!
+        </h3>
+        `;
+    }
+    else
+    {
+        output.innerHTML =
+        `
+        <h3>
+        Missing Concepts
+        </h3>
+
+        <p>
+        ${missing.join(", ")}
+        </p>
+        `;
+    }
 }

@@ -11,19 +11,27 @@
 </head>
 
 <body>
-
     <nav class="navbar">
 
         <h2>Concept Dependency Visualizer</h2>
 
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
             <li><a href="graph.html">Graph</a></li>
         </ul>
-        <button id="themeBtn">
-            🌙 Theme
-        </button>
+
+        <div class="nav-right">
+
+            <span id="userDisplay"></span>
+
+            <button id="themeBtn">
+                🌙 Dark / ☀ Light
+            </button>
+
+        </div>
+
     </nav>
     <section class="welcome-card">
 
@@ -232,6 +240,7 @@
     <script src="concepts.js"></script>
     <script src="storage.js"></script>
     <script src="tracker.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

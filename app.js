@@ -64,12 +64,25 @@ function toggleTheme()
         "light-theme"
     );
 
-    localStorage.setItem(
-        "theme",
+    const button =
+    document.getElementById(
+        "themeBtn"
+    );
+
+    if(
         document.body.classList.contains(
             "light-theme"
         )
-    );
+    )
+    {
+        button.innerHTML =
+        "🌙 Switch Dark";
+    }
+    else
+    {
+        button.innerHTML =
+        "☀ Switch Light";
+    }
 }
 document.addEventListener(
     "DOMContentLoaded",
@@ -85,6 +98,99 @@ document.addEventListener(
         {
             display.innerText =
             "👤 " + user;
+        }
+    }
+);
+document.addEventListener(
+    "DOMContentLoaded",
+    () =>
+    {
+        const user =
+        localStorage.getItem(
+            "user"
+        );
+
+        const display =
+        document.getElementById(
+            "userDisplay"
+        );
+
+        if(display && user)
+        {
+            display.innerText =
+            "👤 " + user;
+        }
+    }
+);
+document.addEventListener(
+    "DOMContentLoaded",
+    () =>
+    {
+        const savedTheme =
+        localStorage.getItem(
+            "theme"
+        );
+
+        if(savedTheme === "light")
+        {
+            document.body.classList.add(
+                "light-theme"
+            );
+        }
+    }
+);
+
+function toggleTheme()
+{
+    document.body.classList.toggle(
+        "light-theme"
+    );
+
+    const button =
+    document.getElementById(
+        "themeBtn"
+    );
+
+    if(
+        document.body.classList.contains(
+            "light-theme"
+        )
+    )
+    {
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
+
+        button.innerHTML =
+        "🌙 Switch Dark";
+    }
+    else
+    {
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
+
+        button.innerHTML =
+        "☀ Switch Light";
+    }
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () =>
+    {
+        const savedTheme =
+        localStorage.getItem(
+            "theme"
+        );
+
+        if(savedTheme === "light")
+        {
+            document.body.classList.add(
+                "light-theme"
+            );
         }
     }
 );

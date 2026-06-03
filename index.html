@@ -22,35 +22,59 @@
 
     <!-- Navigation Bar -->
 
-    <header class="navbar">
+    <nav class="navbar">
 
-        <div class="logo">
-            <h2>Concept Dependency Visualizer</h2>
+        <h2>Concept Dependency Visualizer</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="graph.html">Graph</a></li>
+        </ul>
+
+        <div class="nav-right">
+
             <span id="userDisplay"></span>
+
+            <button id="themeBtn">
+                🌙 Dark / ☀ Light
+            </button>
+
         </div>
 
-        <nav>
+    </nav>
+        <section class="welcome-guide">
 
-            <ul>
+        <h1>
+            Start Your Learning Journey
+        </h1>
 
-                <li><a href="#home">Home</a></li>
+        <div class="guide-cards">
 
-                <li><a href="#dashboard">Dashboard</a></li>
+            <div class="guide-card">
+                <h3>Step 1</h3>
+                <p>Select a target concept.</p>
+            </div>
 
-                <li><a href="#learning-path">Learning Path</a></li>
+            <div class="guide-card">
+                <h3>Step 2</h3>
+                <p>Generate your roadmap.</p>
+            </div>
 
-                <li><a href="#graph-section">Graph</a></li>
+            <div class="guide-card">
+                <h3>Step 3</h3>
+                <p>Track progress in Dashboard.</p>
+            </div>
 
-                <li><a href="#progress-section">Progress</a></li>
+            <div class="guide-card">
+                <h3>Step 4</h3>
+                <p>Earn badges and certificates.</p>
+            </div>
 
-            </ul>
-            <button id="themeBtn">
-                🌙 Theme
-            </button>
-        </nav>
+        </div>
 
-    </header>
-
+    </section>
     <!-- Hero Section -->
 
     <section id="home" class="hero">

@@ -102,14 +102,16 @@ section {
     gap: 20px;
 }
 
-.card {
-    background-color: #1e293b;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
+.card
+{
+    background:#1e293b;
 }
 
+.light-theme .card
+{
+    background:white;
+    color:#1e293b;
+}
 .card:hover {
     transform: translateY(-5px);
 }
@@ -178,8 +180,10 @@ button:hover {
 
 /* Gap Section */
 
-#gapOutput {
+#gapOutput
+{
     background-color: #1e293b;
+    color: white;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -246,6 +250,7 @@ footer {
     margin:8px 0;
     background:#334155;
     border-radius:8px;
+    color:white;
 }
 
 .graph-node
@@ -558,4 +563,410 @@ footer {
 .actions-section
 {
     text-align:center;
+}
+.navbar
+{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#0f172a;
+
+    color:white;
+}
+
+.navbar ul
+{
+    display:flex;
+
+    gap:20px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+}
+
+.navbar a
+{
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:bold;
+}
+
+.nav-right
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+#themeBtn
+{
+    padding:10px 15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+body
+{
+    background:#0f172a;
+
+    color:white;
+
+    transition:0.4s;
+}
+
+.light-theme
+{
+    background:#f8fafc;
+
+    color:#1e293b;
+}
+
+.light-theme .navbar
+{
+    background:white;
+
+    color:#1e293b;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.light-theme .navbar a
+{
+    color:#1e293b;
+}
+
+.light-theme .card,
+.light-theme .roadmap-card,
+.light-theme .welcome-card,
+.light-theme section
+{
+    background:white;
+
+    color:#1e293b;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+section
+{
+    margin:20px;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
+}
+.guide-cards
+{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+.guide-card
+{
+    padding:20px;
+
+    border-radius:12px;
+
+    background:#1e293b;
+
+    text-align:center;
+}
+
+.light-theme .guide-card
+{
+    background:white;
+
+    color:#1e293b;
+}
+/* =========================
+DARK THEME (DEFAULT)
+   ========================= */
+
+body
+{
+    background: #0f172a;
+    color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.card,
+.roadmap-card,
+.guide-card,
+.welcome-card,
+section
+{
+    background: #1e293b;
+    color: #f8fafc;
+    border-radius: 12px;
+}
+
+/* =========================
+ LIGHT THEME
+   ========================= */
+
+.light-theme
+{
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.light-theme section,
+.light-theme .card,
+.light-theme .roadmap-card,
+.light-theme .guide-card,
+.light-theme .welcome-card
+{
+    background: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Navbar */
+
+.light-theme .navbar
+{
+    background: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.light-theme .navbar h2
+{
+    color: #1e293b;
+}
+
+.light-theme .navbar a
+{
+    color: #334155;
+}
+
+/* Inputs */
+
+.light-theme input,
+.light-theme select
+{
+    background: white;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+}
+
+/* Buttons */
+
+.light-theme button
+{
+    background: #2563eb;
+    color: white;
+}
+
+/* Headings */
+
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4
+{
+    color: #0f172a;
+}
+
+/* Paragraphs */
+
+.light-theme p,
+.light-theme span,
+.light-theme li,
+.light-theme label
+{
+    color: #334155;
+}
+/* LIGHT THEME TEXT FIXES */
+
+.light-theme
+{
+    color: #1e293b;
+}
+
+.light-theme .card,
+.light-theme .roadmap-card,
+.light-theme .guide-card,
+.light-theme .welcome-card
+{
+    background: white !important;
+    color: #1e293b !important;
+}
+.light-theme button
+{
+    color:white !important;
+}
+
+.light-theme .btn
+{
+    color:white !important;
+}
+/* ==================================
+   FINAL LIGHT THEME FIXES
+================================== */
+
+.light-theme
+{
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.light-theme .navbar
+{
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.light-theme .navbar a,
+.light-theme .navbar h2,
+.light-theme #userDisplay
+{
+    color: #1e293b;
+}
+
+.light-theme section,
+.light-theme .card,
+.light-theme .roadmap-card,
+.light-theme .guide-card,
+.light-theme .welcome-card,
+.light-theme .badge-card
+{
+    background: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.light-theme input,
+.light-theme select
+{
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+}
+
+.light-theme #searchResult,
+.light-theme #gapOutput,
+.light-theme #analyticsContainer,
+.light-theme #timelineContainer,
+.light-theme #goalProgress,
+.light-theme #studyPlanOutput,
+.light-theme #topologyOutput
+{
+    color: #1e293b;
+}
+
+.light-theme .hero p
+{
+    color: #475569;
+}
+
+.light-theme .concept-name
+{
+    color: #1e293b;
+}
+
+.light-theme .step-number
+{
+    color: #2563eb;
+}
+
+.light-theme .graph-node
+{
+    background: #38bdf8;
+    color: #000000;
+}
+
+.light-theme button,
+.light-theme .btn,
+.light-theme #themeBtn
+{
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.light-theme .card p
+{
+    color: #2563eb;
+}
+/* Progress Tracker Fix */
+
+.concept-item label
+{
+    color:white !important;
+    font-weight:500;
+}
+
+.concept-item span
+{
+    color:white !important;
+}
+
+.light-theme .concept-item
+{
+    background:#334155 !important;
+}
+
+.light-theme .concept-item label
+{
+    color:white !important;
+}
+
+.light-theme .concept-item span
+{
+    color:white !important;
+}
+/* GAP OUTPUT FINAL FIX */
+
+#gapOutput
+{
+    background:#1e293b !important;
+    color:white !important;
+    padding:20px;
+    border-radius:10px;
+}
+
+#gapOutput h3
+{
+    color:#38bdf8 !important;
+}
+
+#gapOutput p
+{
+    color:white !important;
+}
+
+.light-theme #gapOutput
+{
+    background:#1e293b !important;
+    color:white !important;
+}
+
+.light-theme #gapOutput h3
+{
+    color:#38bdf8 !important;
+}
+
+.light-theme #gapOutput p
+{
+    color:white !important;
 }
